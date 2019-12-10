@@ -1,2 +1,32 @@
 #include<iostream>
-using namespace std;TRENDING
+#include "queue.h"
+using namespace std;
+
+int main() {
+	int choose;
+	do
+	{
+		//Tampilan menu
+		cout << "-------------------\n"
+			<< "   Program Antrian Loket Bus\n"
+			<< "----------------------------\n"
+			<< " [1] Tiket antar provinsi              \n"
+			<< " [2] Tiket antar kota                \n"
+			<< " [3] Keluar               \n\n"
+			<< "----------------------------\n"
+			<< "Masukkan pilihan : "; cin >> choose;
+		switch (choose)
+		{
+		case 1:
+			enqueue();
+			break;
+		case 2:
+			dequeue();
+			break;
+		default:
+			cout << "Pilihan tidak tersedia";
+			break;
+		}
+	} while (choose !=3);
+	return 0;
+}
